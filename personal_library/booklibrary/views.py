@@ -4,7 +4,7 @@ from .models import Books
 from .serilazers import BooksSerializer
 
 # Create your views here.
-class BookListCreateView(generics.ListCreateView):
+class BookListCreateView(generics.ListCreateAPIView):
     queryset = Books.objects.all()
     serializer_class = BooksSerializer
     
