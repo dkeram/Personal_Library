@@ -14,12 +14,12 @@ services:
       - db
 
   frontend:
-    build: ./frontend
+    build: ./frontend/book-personal_library
     container_name: react_app
     ports:
       - "3000:80"
     depends_on:
-      - backend
+      - personal_library
 
   db:
     image: postgres:15-alpine
