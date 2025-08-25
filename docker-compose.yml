@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   backend:
     build: ./personal_library
@@ -14,12 +12,12 @@ services:
       - db
 
   frontend:
-    build: ./frontend/book-personal_library
+    build: ./frontend/book-library
     container_name: react_app
     ports:
       - "3000:80"
     depends_on:
-      - personal_library
+      - backend
 
   db:
     image: postgres:15-alpine
