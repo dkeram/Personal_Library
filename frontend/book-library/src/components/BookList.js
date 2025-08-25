@@ -33,8 +33,7 @@ const BookList = (props) => {
                         <div>
                             <span 
                                 onClick = {()=> {handleBookClick(book.id)}}
-                                style = {{cursor: "pointer" }}
-                            >
+                                style = {{cursor: "pointer" }}>
                                 <b>{book.title}</b>
                             </span>
                             <button className="btn btn-danger" onClick={() => handleDelete(book.id) }>Delete</button>
